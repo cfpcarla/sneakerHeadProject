@@ -11,7 +11,7 @@ const footerStyle = makeStyles((theme) => ({
     flexWrap: "wrap",
     marginTop: "",
     marginLeft: "0",
-    background: "#f6eeea",
+    background: "#F8F9F9",
   },
   footerHeader: {
     display: "flex",
@@ -27,7 +27,7 @@ const footerStyle = makeStyles((theme) => ({
     justifyContent: "space-around",
     paddingTop: "2vh",
     paddingBottom: "4vh",
-    background: "#f6eeea",
+    background: "#F8F9F9",
   },
   footerContent: {
     width: "70vw",

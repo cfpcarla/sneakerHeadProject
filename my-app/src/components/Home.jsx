@@ -1,21 +1,42 @@
 import React from "react";
 import CardFeature from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/side-components/card-features.js";
 import peachShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/peachShoe.png";
+import blueShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/blueShoe.png";
+import greenShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/greenShoe.png";
+import redShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/redShoe.png";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Grid, Box, Button, Typography, Link, Paper } from "@material-ui/core";
+import MobileStepper from "@material-ui/core/MobileStepper";
+import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
+import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
 import {
-  makeStyles,
-  Grid,
-  Box,
-  Button,
-  Typography,
-  Link,
-} from "@material-ui/core";
+  ABOUT,
+  BLOG,
+} from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/controller/nav-controller.js";
+import { autoPlay } from "react-swipeable-views-utils";
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-import { ABOUT, BLOG } from "../controller/nav-controller";
+const tutorialSteps = [
+  {
+    imgPath: peachShoe,
+  },
+  {
+    imgPath: blueShoe,
+  },
+  {
+    imgPath: redShoe,
+  },
+  {
+    imgPath: greenShoe,
+  },
+];
 
 const homeStyles = makeStyles((theme) => ({
   root: { flexGrow: 1 },
+
   proposition: {
-    background: "#f6eeea",
+    background: "#F2F3F4",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "40% 50%",
@@ -65,7 +86,7 @@ const homeStyles = makeStyles((theme) => ({
   },
   resourcesPaper: {
     borderRadius: "5px",
-    backgroundColor: "#fffafa",
+    backgroundColor: "#F2F3F4",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
@@ -109,7 +130,7 @@ const homeStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     marginTop: "5rem",
-    background: "#f6eeea",
+    background: "#F2F3F4",
   },
   logo: {
     display: "flex",
@@ -124,228 +145,131 @@ const homeStyles = makeStyles((theme) => ({
     marginLeft: "-580px",
     marginBottom: "45px",
   },
+  header: {
+    display: "flex",
+    alignItems: "center",
+    height: 50,
+    paddingLeft: theme.spacing(4),
+    backgroundColor: theme.palette.background.default,
+  },
+  img: {
+    height: 1300,
+    display: "block",
+    Width: 400,
+    overflow: "hidden",
+    width: "100%",
+  },
 }));
+
 const Home = (props) => {
   const classes = homeStyles();
-  const setParentDisplay = (value) => {
-    props.setDisplay(value);
+  const theme = useTheme();
+
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = tutorialSteps.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
   };
 
   return (
     <>
       <div>
-        {/* VALUE PROPOSITION */}
-        <Grid item xs={12} className={classes.proposition}>
-          <img
-            className={classes.communityImg}
-            src={peachShoe}
-            alt="united covid 19 unsplash"
-          ></img>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={6}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          ></Grid>
-        </Grid>
-        <Typography variant="h1" align="center">
-          Perfect your professional portfolio
-        </Typography>
-        <Typography
-          variant="h4"
-          align="center"
-          style={{ marginTop: "1rem", color: "#d4d4d4" }}
+        {/* INTRO */}
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            background: "#F2F3F4",
+            justifyContent: "center",
+          }}
         >
-          Your curated library of learning materials, job postings, and
-          dedicated networking communities - All within a single sources!
-        </Typography>
-        <Button
-          style={{ marginTop: "2rem", fontSize: "1.5rem" }}
-          variant="contained"
-        >
-          Start now
-        </Button>
-
-        {/* LIST FEATURE PROVIDED */}
-        <Grid item xs={12}>
-          <Typography variant="h4" align="center" style={{ marginTop: "2rem" }}>
-            Provided Features
+          {/* <Typography variant="h1" align="center">
+            We really love shoes!
           </Typography>
-          <Grid item xs={12} className={classes.featureList}>
-            <CardFeature
-              title="Educational Programs"
-              desc="Our online course selection has been vetted and verified to provide you with the industry’s most renowned learning materials. Our up to date programs are actively implemented and will help to give you a leading edge in your field of interest."
-              img={peachShoe}
-              btn={true}
-              maxWidth={300}
-              margin="0 auto 0 auto"
-            />
-            <CardFeature
-              title="Job Opportunities"
-              desc="Our in house bulletin boards are made to be the first stop on your employment pursuits. We offer links to job search engines, companies hiring around you, and business postings for both contract and internship availabilities."
-              // img={Forum}
-              btn={true}
-              maxWidth={300}
-              margin="0 auto 0 auto"
-            />
-            <CardFeature
-              title="Community Hub"
-              desc="Our community hub is a gateway for teachers, students, businesses, and individuals - All working, learning, and improving as one."
-              // img={Workshop}
-              btn={true}
-              maxWidth={300}
-              margin="0 auto 0 auto"
-            />
-            <CardFeature
-              title="Hiring Workshop"
-              desc="Job in mind? Strengthen your skills and ace your next job interview with ease!"
-              // img={JobSearch}
-              btn={true}
-              maxWidth={300}
-              margin="0 auto 0 auto"
-            />
-          </Grid>
+          <Typography
+            variant="h4"
+            align="center"
+            style={{ marginTop: "1rem", color: "black" }}
+          >
+            Sneakerhead wears, review and rates all the latest and greatest
+            kicks on the market.
+          </Typography> */}
         </Grid>
 
-        {/* FLEX ON THE SEARCH ENGINEE */}
-        <Grid item xs={12} md={12} className={classes.resourcesListContainer}>
-          <Box height="80%" className={classes.resourcesPaper}>
-            <Typography
-              gutterBottom
-              variant="h3"
-              style={{ fontWeight: "normal" }}
-              align="center"
-            >
-              We search around the internet to find the best resources for you
-              to improve upon your next career path.
-            </Typography>
-            <Box className={classes.resourcesList}></Box>
-            <Typography variant="h4">+ dozen more resources to come</Typography>
-            <Typography
-              align="center"
-              variant="h3"
-              style={{ fontWeight: "bold" }}
-            >
-              so that you don't
-            </Typography>
-
-            <Button
-              style={{ marginTop: "2rem", fontSize: "1.5rem" }}
-              variant="contained"
-              color="primary"
-            >
-              Start now
-            </Button>
-          </Box>
-        </Grid>
-
-        {/* Community Hub explain */}
-        <Box xs={12} display="flex" flexWrap="wrap">
-          <Grid
-            item
-            xs={12}
-            lg={6}
-            md={6}
-            style={{ margin: "2rem auto 2rem auto", paddingLeft: "1rem" }}
+        <Grid item xs={12} className={classes.proposition}>
+          <Paper square elevation={0} className={classes.header}>
+            <Typography>{tutorialSteps[activeStep].label}</Typography>
+          </Paper>
+          <AutoPlaySwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
           >
-            <Typography variant="h3">
-              A fully integrated suite of learning materials and job resources
-              from multiple platforms combind
-            </Typography>
-            <Typography variant="h4" style={{ marginTop: "2rem" }}>
-              We bring together everything that’s require to land your next job.
-              From educational resources to improve your skills, to job search
-              engine, or a professional workshop where you can improve upon your
-              interview and resume skills.
-            </Typography>
-            <Typography variant="h4" style={{ margin: "2rem 0 2rem 0" }}>
-              We also provide a <Link color="secondary">community hub</Link> for
-              users to join and share their thought to one of another.
-            </Typography>
-            <Button variant="contained" color="primary">
-              Explore now
-            </Button>
-          </Grid>
-          <Grid item xs={12} lg={5} md={5}>
-            {/* <img
-              className={classes.communityImg}
-              src={CommunityHub}
-              alt="united covid 19 unsplash"
-            ></img> */}
-          </Grid>
-        </Box>
-
-        <Grid container className={classes.nextStep}>
-          <Grid
-            item
-            xs={12}
-            md={4}
-            className={classes.nextStepContent}
-            style={{ margin: " 0 auto 0 auto" }}
-          >
-            <Typography variant="h3"> Ready to get started ?</Typography>
-            <Typography variant="h4" style={{ marginTop: "2rem" }}>
-              Head over to Glaukopis Wisdom and start your career search now.
-              Still have question about our service and how it work ? - We
-              answered a few frequently asked question for you.
-            </Typography>
-            <Grid item xs={12} className={classes.buttonContainer}>
-              <Button
-                className={classes.btnCont}
-                variant="contained"
-                color="secondary"
-              >
-                Start now
-              </Button>
-              <Button
-                className={classes.btnCont}
-                onClick={() => setParentDisplay(BLOG)}
-                variant="contained"
-                color="primary"
-              >
-                Explore services
-              </Button>
-            </Grid>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            className={classes.nextStepContent}
-            style={{ margin: " 0 auto 0 auto" }}
-          ></Grid>
+            {tutorialSteps.map((step, index) => (
+              <div key={step.label}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <img
+                    className={classes.img}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+          <MobileStepper
+          // steps={maxSteps}
+          // position="static"
+          // variant="text"
+          // activeStep={activeStep}
+          // nextButton={
+          //   <Button
+          //     size="small"
+          //     onClick={handleNext}
+          //     disabled={activeStep === maxSteps - 1}
+          //   >
+          //     Next
+          //     {theme.direction === "rtl" ? (
+          //       <KeyboardArrowLeft />
+          //     ) : (
+          //       <KeyboardArrowRight />
+          //     )}
+          //   </Button>
+          // }
+          // backButton={
+          //   <Button
+          //     size="small"
+          //     onClick={handleBack}
+          //     disabled={activeStep === 0}
+          //   >
+          //     {theme.direction === "rtl" ? (
+          //       <KeyboardArrowRight />
+          //     ) : (
+          //       <KeyboardArrowLeft />
+          //     )}
+          //     Back
+          //   </Button>
+          // }
+          />
         </Grid>
       </div>
     </>
   );
 };
-
-// return (
-//   <>
-//     <div>
-//       {/* Image with me and my name  */}
-//       <Grid item xs={12} className={classes.proposition}>
-//         <Grid
-//           item
-//           xs={12}
-//           style={{
-//             display: "flex",
-//             flexDirection: "column",
-//             alignItems: "center",
-//           }}
-//         >
-//           <Box className={classes.box}>
-//             <img className={classes.imgBrand} alt="logo" src={peachShoe} />
-//           </Box>
-//         </Grid>
-//       </Grid>
-//     </div>
-//   </>
-// );
 
 export default Home;

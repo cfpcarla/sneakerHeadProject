@@ -42,6 +42,7 @@ const HeaderItem = ({ title, actionFn }) => {
 
 const navStyles = makeStyles((theme) => ({
   root: {
+    // maxWidth: 400,
     flexGrow: 1,
   },
 
@@ -52,7 +53,7 @@ const navStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    backgroundColor: "#f6eeea",
+    backgroundColor: "#F2F3F4",
     padding: "2vh 0 2vh 0.5vw",
     justifyContent: "space-between",
     fontWeight: "bold",
@@ -61,6 +62,9 @@ const navStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    height: "250px",
+    width: "210px",
+    marginLeft: "50px",
   },
   navContent: {
     [theme.breakpoints.down("xs")]: {
@@ -154,7 +158,7 @@ const Navigation = (props) => {
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
             <img
-              className={classes.communityImg}
+              className={classes.logo}
               src={snLogoBlack}
               alt="united covid 19 unsplash"
             ></img>
