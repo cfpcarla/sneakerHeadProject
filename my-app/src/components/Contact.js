@@ -113,7 +113,7 @@ const Contact = () => {
       <ValidatorForm onSubmit={handleSubmit} className={classes.form}>
         <div className={classes.eduheader}>
           <Typography color="black" variant="h3">
-            Contact me
+            Contact Us
           </Typography>
           <Typography color="black" variant="h4">
             I will be happy to answer your questions. Fill out the form and I

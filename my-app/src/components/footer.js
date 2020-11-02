@@ -4,14 +4,12 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 const footerStyle = makeStyles((theme) => ({
-  root: {},
-
   footer: {
     display: "flex",
     flexWrap: "wrap",
     marginTop: "",
     marginLeft: "0",
-    background: "#F8F9F9",
+    background: "#F2F3F4",
   },
   footerHeader: {
     display: "flex",
@@ -27,7 +25,7 @@ const footerStyle = makeStyles((theme) => ({
     justifyContent: "space-around",
     paddingTop: "2vh",
     paddingBottom: "4vh",
-    background: "#F8F9F9",
+    background: "#F2F3F4",
   },
   footerContent: {
     width: "70vw",
@@ -51,7 +49,7 @@ const Footer = (props) => {
                 variant="h4"
                 style={{ fontWeight: "bold", color: "black" }}
               >
-                Follow Me
+                Follow Us
               </Typography>
               <Typography variant="h5">
                 <a href=" https://github.com/cfpcarla" target="_blank">

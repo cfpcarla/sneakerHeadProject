@@ -62,7 +62,7 @@ const navStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "250px",
+    height: "200px",
     width: "210px",
     marginLeft: "50px",
   },
