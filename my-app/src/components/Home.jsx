@@ -137,8 +137,6 @@ const Home = (props) => {
         <Grid
           item
           xs={12}
-          sm={12}
-          md={6}
           style={{
             display: "flex",
             flexDirection: "column",
