@@ -45,9 +45,9 @@ const homeStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   img: {
-    height: 1300,
+    height: 1000,
     display: "block",
-    Width: 400,
+    Width: 300,
     overflow: "hidden",
     width: "100%",
     backgroundColor: "#455954",
@@ -179,7 +179,7 @@ const Home = (props) => {
             }}
             variant="contained"
           >
-            Start now
+            Learn More
           </Button>
         </Grid>
       </div>
