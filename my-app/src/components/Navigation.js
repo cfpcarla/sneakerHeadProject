@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import snLogoBlack from "../Assets/Logo/snLogoBlack.png";
+import snLogoH from "../Assets/Logo/snLogoH.png";
 import {
   Box,
   Button,
@@ -62,8 +62,8 @@ const navStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "200px",
-    width: "210px",
+    height: "88px",
+    width: "196px",
     marginLeft: "50px",
   },
   navContent: {
@@ -159,7 +159,7 @@ const Navigation = (props) => {
           <Toolbar>
             <img
               className={classes.logo}
-              src={snLogoBlack}
+              src={snLogoH}
               alt="united covid 19 unsplash"
             ></img>
             <IconButton

@@ -174,7 +174,7 @@ const Home = (props) => {
           <Button
             style={{
               marginTop: "1rem",
-              marginBottom: "3rem",
+              marginBottom: "6rem",
               fontSize: "1.5rem",
             }}
             variant="contained"
