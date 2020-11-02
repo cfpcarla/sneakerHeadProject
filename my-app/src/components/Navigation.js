@@ -181,12 +181,12 @@ const Navigation = (props) => {
                     actionFn={() => setParentDisplay(HOME)}
                   />
                   <HeaderItem
-                    title="About"
-                    actionFn={() => setParentDisplay(ABOUT)}
-                  />
-                  <HeaderItem
                     title="TOP10"
                     actionFn={() => setParentDisplay(TOP10)}
+                  />
+                  <HeaderItem
+                    title="About"
+                    actionFn={() => setParentDisplay(ABOUT)}
                   />
                   <HeaderItem
                     title="Blog"
