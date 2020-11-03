@@ -43,15 +43,14 @@ const Blog = () => {
               variant="h3"
               style={{ margin: "2vh 0 2vh 0" }}
             >
-              My Blog
+              Blog
             </Typography>
             <Typography
               align="center"
               variant="h4"
               style={{ margin: "2vh 0 2vh 0" }}
             >
-              Behind the scenes of products I’ve built, projects I’ve worked on
-              and more.
+              Here you can find all the information about shoes. Having fun!
             </Typography>
           </Grid>
         </Box>
@@ -64,39 +63,39 @@ const Blog = () => {
         >
           <Grid item xs={12} className={classes.generalCardFeature}>
             <CardFeature
-              title="What is TDD and its Benefits"
-              desc="TDD (Test-Driven Development) has become a recurring practice among good developers. But to start talking more about TDD we need to understand what exactly TDD is and what it is for. So Let’s go."
+              title="The Best Shoe Organizers to Store Your Favorite Footwear"
+              desc="Luckily, there are plenty of shoe organizer options for you to choose from. Boxes, racks and over-the-closet hangers can come in handy for your ever-growing collection of footwear. But before you make your purchase, make sure you go through and evaluate the types of shoes you have."
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
-              href="https://medium.com/@cfpcarla/what-is-tdd-and-its-benefits-81db99b06438"
+              href="https://footwearnews.com/2020/shop/shoes/best-shoe-organizers-amazon-reviews-1203066641/"
               target="_blank"
             />
             <CardFeature
-              title="Why learn Ruby and Rails?"
-              desc="Ruby And Rails are super famous in the world of developers, many people like others not so much, so I decided to write a little about it."
+              title="Adidas celebrates a Masters tradition with the Crossknit DPR Low Am shoes?"
+              desc="The Masters is filled with traditions, from the Champions Dinner to the Par 3 Contest (canceled this year) to the winner being awarded the green jacket."
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
-              href="https://medium.com/@cfpcarla/why-learn-ruby-and-rails-3f34f2420132"
+              href="https://golfweek.usatoday.com/2020/11/02/masters-adidas-crossknit-dpr-low-am-shoes/"
               target="_blank"
             />
             <CardFeature
-              title="Pair Programming: Advantages and disadvantages of Pair Programming"
-              desc="Pair programming is a practice used by teams that adopt Extreme Programming (XP)."
+              title="Sidi MTB Gravel shoes an entry onto gravel bandwagon"
+              desc="The Italian shoemaker Sidi has a new shoe aimed at the gravel market with the fairly straightforward title of Sidi MTB Gravel. Set in the middle of Sidi’s extensive range, the $239 pair features a durable upper and a carbon/nylon outsole."
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
-              href="https://medium.com/@cfpcarla/pair-programming-advantages-and-disadvantages-of-pair-programming-1748ed69305"
+              href="https://www.velonews.com/gear/gravel-gear/sidi-mtb-gravel-shoes-an-entry-onto-gravel-bandwagon/"
               target="_blank"
             />
             <CardFeature
-              title="Introduction to React"
-              desc="React is a JavaScript library that has tools that facilitate the construction of Interfaces on the Web."
+              title="2020-2026 Orthopedic Shoes Market Detail Analysis focusing on Application, Types and Regional Outlook by New Balance, Dr. Comfort, Mephisto, Apex"
+              desc="Global Orthopedic Shoes Market report focuses on global major leading industry players providing information such as company profiles, product picture and specification, capacity, production, price, cost, revenue and contact information."
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
-              href="#pro-section"
+              href="https://rejerusalem.com/245099/2020-2026-orthopedic-shoes-market-detail-analysis-focusing-on-application-types-and-regional-outlook-by-new-balance-dr-comfort-mephisto-apex/"
             />
           </Grid>
         </Grid>
