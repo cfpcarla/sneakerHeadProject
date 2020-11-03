@@ -156,7 +156,7 @@ const Home = (props) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            background: "#F2F3F4",
+            background: "#EFCEB7",
             justifyContent: "center",
           }}
         >
@@ -169,7 +169,7 @@ const Home = (props) => {
               marginTop: "3rem",
               color: "black",
               alignItems: "center",
-              background: "#F2F3F4",
+              background: "#EFCEB7",
             }}
           >
             We really love shoes
@@ -183,7 +183,7 @@ const Home = (props) => {
               marginBottom: "3rem",
               color: "black",
               alignItems: "center",
-              background: "#F2F3F4",
+              background: "#EFCEB7",
             }}
           >
             Sneakerhead wears, review and rates all the latest and greatest
