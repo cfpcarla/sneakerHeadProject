@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, Grid, Typography, Box, Link } from "@material-ui/core";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import TwitterIcon from "@material-ui/icons/Twitter";
 const footerStyle = makeStyles((theme) => ({
   footer: {
     display: "flex",
@@ -51,20 +51,20 @@ const Footer = (props) => {
               >
                 Follow Us
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h3">
                 <a href=" https://github.com/cfpcarla" target="_blank">
-                  <GitHubIcon />
+                  <FacebookIcon />
                 </a>
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h3">
                 <a
                   href="https://www.linkedin.com/in/carla-fabricia-medeiros/?locale=en_US"
                   target="_blank"
                 >
-                  <LinkedInIcon />
+                  <TwitterIcon />
                 </a>
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h3">
                 <a href="https://www.instagram.com/cfpcarla/" target="_blank">
                   <InstagramIcon />
                 </a>

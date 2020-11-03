@@ -155,7 +155,7 @@ const Home = (props) => {
               background: "#F2F3F4",
             }}
           >
-            We really love shoes!
+            We really love shoes
           </Typography>
           <Typography
             variant="h4"
@@ -166,6 +166,7 @@ const Home = (props) => {
               color: "black",
               alignItems: "center",
               background: "#F2F3F4",
+              fontStyle: "verdana",
             }}
           >
             Sneakerhead wears, review and rates all the latest and greatest

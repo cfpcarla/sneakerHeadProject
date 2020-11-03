@@ -1,6 +1,11 @@
 import React from "react";
 import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
-
+import peachShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/peachShoe.png";
+import blueShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/blueShoe.png";
+import greenShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/greenShoe.png";
+import redShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/redShoe.png";
+import ninjaAdidas from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/ninjaAdidas.png";
+import shoeTerrex from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/shoeTerrex.png";
 import CardFeature from "../side-components/card-features";
 
 const serviceStyle = makeStyles((theme) => ({
@@ -26,6 +31,7 @@ const serviceStyle = makeStyles((theme) => ({
     marginTop: "2rem",
     display: "flex",
     flexWrap: "wrap",
+    marginBotton: "3rem",
   },
 }));
 
@@ -52,15 +58,9 @@ const Ranking = () => {
               variant="h3"
               style={{ margin: "2vh 0 2vh 0" }}
             >
-              I am Proficient...
+              Here are the 10 best shoes for you
             </Typography>
-            <Typography align="center" variant="h6">
-              in React, Redux, Rest API, NodeJS, Express, Git, Ruby on Rails,
-              Javascript, Clojure, Storybook, Jest, HTML5, CSS and Python.
-              <br></br>I always look forward to finding ways to integrate new
-              tools and languages into my projects. You can take a look at my
-              Github repositories.
-            </Typography>
+            <Typography align="center" variant="h6"></Typography>
           </Grid>
         </Box>
 
@@ -84,49 +84,63 @@ const Ranking = () => {
         >
           <Grid item xs={12} className={classes.cardFeatureProject}>
             <CardFeature
-              title="Booklist"
-              desc="I developed this project as a platform in which you can search for books and save them to read later.
-              Building a React application with a NodeJS and API back-end. ​Also use Trello to manage and organize better the tasks and VS code to develop the app."
+              title=" 1 Nike Air Max 1 'Evergreen'"
+              desc="The Nike Air Max 1 ‘Evergreen’ features OG-inspired color blocking on the groundbreaking silhouette that introduced visible Air cushioning to an unsuspecting public back in 1987. The breathable white mesh upper is fortified with grey synthetic suede overlays and a dark green mudguard. The latter hue is repeated on the signature Swoosh and classic Nike branding hits at the heel panel and woven tongue tag."
               btn={true}
+              img={greenShoe}
               maxWidth={600}
               margin="0 auto 0 auto"
               href="#edu-section"
+              margin-botton="3rem"
             />
             <CardFeature
-              title="Task-Scheduling"
-              desc="I developed this Project and the purpose is a Task Scheduling App for Dispatcher/ Driver.
-              Use React with MaterialUI, also use Trello to manage and organize better the tasks and VS code to develop the app."
+              title=" 2 Nike Revolution Shoes - Royal Blue"
+              desc="Your active little one can stay cool and comfy on the playground wearing the Nike Boys' Grade School Revolution 5 Kids' Shoe Blue/White/Black. These running shoes for kids feature a mesh upper that is lightweight, breathable and stretchy. A foam midsole provides ample cushioning for his landings."
               btn={true}
+              img={blueShoe}
               maxWidth={600}
               margin="0 auto 0 auto"
               href="​https://task-scheduling-project-3xlw5vfky.vercel.app/"
               target="_blank"
+              margin-botton="3rem"
             />
             <CardFeature
-              title="Glaukopis Wisdom"
-              desc=" I developed this Project and the purpose is a library of learning materials, job postings, and dedicated networking communities - All within a single sources! We use React with Material UI, also use Trello to manage and organize better the tasks and VS code to develop the website."
+              title="3 Nike Women's React Element Sneakers - White Pink "
+              desc="The Nike React Element 55 Women's Shoe borrows design lines from heritage Nike runners like the Internationalist, adds reflective graphics and then places it all on Nike React technology."
               btn={true}
               maxWidth={600}
+              img={peachShoe}
               margin="0 auto 0 auto"
               href="https://glaukopis-wisdom.vercel.app/"
               target="_blank"
+              margin-botton="3rem"
+              margin-top="1rem"
             />
             <CardFeature
-              title="CommitED"
-              desc="This app closes the gap by providing a platform to host a network of Service Providers and volunteers who want to give back or fulfill a mandatory commitment.
-              I used NodeJS
-              Express
-              BodyParser
-              Node-fetch
-              Heroku deployment
-              Google maps API
-              React with materialUI
-              Bcrypt
-              Nodemailer
-              PostgreSQL
-              Cors
-              Axios, also use Trello to manage and organize better the tasks and VS code to develop the app."
+              title="4 Air Jordan 1 Retro High Black and Grey"
+              desc="The Nike Air Jordan 1 Retro High 'Black Elephant' features a black leather and cement grey elephant print upper reminiscent of the iconic 2002 Supreme x Dunk Low Pro SB. Released in January 2016, the look is finished off with Varsity Red accents, a white midsole, and a black outsole."
               btn={true}
+              img={redShoe}
+              maxWidth={600}
+              margin="0 auto 0 auto"
+              href="#pro-section"
+            />
+
+            <CardFeature
+              title="5 NINJA NITE JOGGER SHOES"
+              desc="A collaborative effort between adidas and gaming streamer, Tyler Ninja Blevins, these Nite Jogger shoes stand as a testament to the time it takes to achieve greatness. Energy-returning cushioning and a mesh and leather upper keep you comfortable as the game heats up."
+              btn={true}
+              img={ninjaAdidas}
+              maxWidth={600}
+              margin="0 auto 0 auto"
+              href="#pro-section"
+            />
+
+            <CardFeature
+              title="6 TERREX TWO ULTRA PARLEY TRAIL RUNNING SHOES"
+              desc="TERREX TWO Ultra Parley – designed to keep you comfortable on the trail, no matter the distance. The flexible upper features Parley Ocean Plastic – up-cycled plastic waste, intercepted on remote islands, beaches, coastal communities, and shorelines, preventing it from polluting our oceans. And with full-length Boost cushioning and a Continental™ Rubber outsole for serious grip, it's time to hit the trail."
+              btn={true}
+              img={shoeTerrex}
               maxWidth={600}
               margin="0 auto 0 auto"
               href="#pro-section"
