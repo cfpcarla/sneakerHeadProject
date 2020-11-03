@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import CardFeature from "../side-components/card-features";
 
-const serviceStyle = makeStyles((theme) => ({
+const blogStyle = makeStyles((theme) => ({
   root: {
     paddingTop: "5vh",
     display: "flex",
@@ -21,7 +21,7 @@ const serviceStyle = makeStyles((theme) => ({
 }));
 
 const Blog = () => {
-  const classes = serviceStyle();
+  const classes = blogStyle();
 
   return (
     <>

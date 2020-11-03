@@ -13,15 +13,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     alignItems: "center",
   },
-  illustration: {
-    width: "45vw",
-    height: "50vh",
-    [theme.breakpoints.down("sm")]: {
-      margin: "auto",
-      width: "95vw",
-      height: "40vh",
-    },
-  },
   form: {
     display: "flex",
     flexDirection: "column",
@@ -108,16 +99,18 @@ const Contact = () => {
 
   return (
     <Grid container className={classes.root}>
-      {/* <img src={contact} /> */}
-
       <ValidatorForm onSubmit={handleSubmit} className={classes.form}>
         <div className={classes.eduheader}>
-          <Typography color="black" variant="h3">
+          <Typography
+            color="black"
+            variant="h3"
+            style={{ marginBottom: "2vh" }}
+          >
             Contact Us
           </Typography>
           <Typography color="black" variant="h4">
-            I will be happy to answer your questions. Fill out the form and I
-            will be in touch as soon as possible.
+            Our team will be happy to answer your questions. Fill out the form
+            and we will be in touch as soon as possible.
           </Typography>
         </div>
 

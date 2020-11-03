@@ -8,7 +8,7 @@ import ninjaAdidas from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/
 import shoeTerrex from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/shoeTerrex.png";
 import CardFeature from "../side-components/card-features";
 
-const serviceStyle = makeStyles((theme) => ({
+const rankingStyle = makeStyles((theme) => ({
   root: {
     paddingTop: "5vh",
     display: "flex",
@@ -27,7 +27,7 @@ const serviceStyle = makeStyles((theme) => ({
       background: "black",
     },
   },
-  cardFeatureProject: {
+  cardFeature: {
     marginTop: "2rem",
     display: "flex",
     flexWrap: "wrap",
@@ -36,7 +36,7 @@ const serviceStyle = makeStyles((theme) => ({
 }));
 
 const Ranking = () => {
-  const classes = serviceStyle();
+  const classes = rankingStyle();
 
   return (
     <>
@@ -64,7 +64,7 @@ const Ranking = () => {
           </Grid>
         </Box>
 
-        <Grid>
+        {/* <Grid>
           <Button
             className={classes.btnFeature}
             color="secondary"
@@ -74,7 +74,7 @@ const Ranking = () => {
           >
             See all features
           </Button>
-        </Grid>
+        </Grid> */}
 
         <Grid
           id="card-feature-projects"
@@ -82,7 +82,7 @@ const Ranking = () => {
           xs={12}
           style={{ marginBottom: "2vh" }}
         >
-          <Grid item xs={12} className={classes.cardFeatureProject}>
+          <Grid item xs={12} className={classes.cardFeature}>
             <CardFeature
               title=" 1 Nike Air Max 1 'Evergreen'"
               desc="The Nike Air Max 1 ‘Evergreen’ features OG-inspired color blocking on the groundbreaking silhouette that introduced visible Air cushioning to an unsuspecting public back in 1987. The breathable white mesh upper is fortified with grey synthetic suede overlays and a dark green mudguard. The latter hue is repeated on the signature Swoosh and classic Nike branding hits at the heel panel and woven tongue tag."
@@ -102,7 +102,7 @@ const Ranking = () => {
               margin="0 auto 0 auto"
               href="​https://task-scheduling-project-3xlw5vfky.vercel.app/"
               target="_blank"
-              margin-botton="3rem"
+              style={{ marginBottom: "2vh" }}
             />
             <CardFeature
               title="3 Nike Women's React Element Sneakers - White Pink "
@@ -113,8 +113,7 @@ const Ranking = () => {
               margin="0 auto 0 auto"
               href="https://glaukopis-wisdom.vercel.app/"
               target="_blank"
-              margin-botton="3rem"
-              margin-top="1rem"
+              style={{ marginBottom: "2vh" }}
             />
             <CardFeature
               title="4 Air Jordan 1 Retro High Black and Grey"
