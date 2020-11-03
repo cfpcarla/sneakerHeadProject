@@ -60,14 +60,11 @@ const StyledButton = withStyles({
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     borderRadius: 6,
     border: 0,
-    color: "white",
+    color: "black",
     height: 48,
     padding: "0 30px",
     marginTop: "1rem",
     marginBottom: "6rem",
-  },
-  label: {
-    textTransform: "capitalize",
   },
 })(Button);
 
