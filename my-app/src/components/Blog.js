@@ -40,21 +40,22 @@ const Blog = () => {
           <Grid item xs={12} md={6} lg={6}>
             <Typography
               align="center"
-              variant="h3"
+              variant="inherit"
+              component="h1"
               style={{ margin: "2vh 0 2vh 0" }}
             >
               Blog
             </Typography>
             <Typography
               align="center"
-              variant="h4"
+              variant="inherit"
+              component="h2"
               style={{ margin: "2vh 0 2vh 0" }}
             >
               Here you can find all the information about shoes. Having fun!
             </Typography>
           </Grid>
         </Box>
-
         <Grid
           id="general-card-feature"
           item

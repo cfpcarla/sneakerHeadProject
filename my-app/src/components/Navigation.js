@@ -19,9 +19,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
-import CodeIcon from "@material-ui/icons/Code";
 import PostAddIcon from "@material-ui/icons/PostAdd";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
+import StarsIcon from "@material-ui/icons/Stars";
 
 import {
   HOME,
@@ -35,7 +35,9 @@ import {
 const HeaderItem = ({ title, actionFn }) => {
   return (
     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={actionFn}>
-      <Typography variant="h5">{title}</Typography>
+      <Typography variant="inherit" component="h2">
+        {title}
+      </Typography>
     </Button>
   );
 };
@@ -103,44 +105,35 @@ const Navigation = (props) => {
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
-
           <HeaderItem title="Home" actionFn={() => setParentDisplay(HOME)} />
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <InfoIcon />
           </ListItemIcon>
-
           <HeaderItem
-            title="About Me"
+            title="About Us"
             actionFn={() => setParentDisplay(ABOUT)}
           />
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <CodeIcon />
+            <StarsIcon />
           </ListItemIcon>
-
-          <HeaderItem
-            title="Projects"
-            actionFn={() => setParentDisplay(TOP10)}
-          />
+          <HeaderItem title="Top 10" actionFn={() => setParentDisplay(TOP10)} />
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <PostAddIcon />
           </ListItemIcon>
-
-          <HeaderItem title="My Blog" actionFn={() => setParentDisplay(BLOG)} />
+          <HeaderItem title="Blog" actionFn={() => setParentDisplay(BLOG)} />
         </ListItem>
-
         <ListItem button>
           <ListItemIcon>
             <ContactSupportIcon />
           </ListItemIcon>
-
           <HeaderItem
-            title="Contact"
+            title="Connect"
             actionFn={() => setParentDisplay(CONNECT)}
           />
         </ListItem>

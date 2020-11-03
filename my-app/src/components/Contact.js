@@ -103,12 +103,13 @@ const Contact = () => {
         <div className={classes.eduheader}>
           <Typography
             color="black"
-            variant="h3"
+            variant="inherit"
+            component="h1"
             style={{ marginBottom: "2vh" }}
           >
             Contact Us
           </Typography>
-          <Typography color="black" variant="h4">
+          <Typography variant="inherit" component="h2">
             Our team will be happy to answer your questions. Fill out the form
             and we will be in touch as soon as possible.
           </Typography>

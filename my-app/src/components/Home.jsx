@@ -1,19 +1,12 @@
 import React from "react";
-import CardFeature from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/side-components/card-features.js";
-import peachShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/peachShoe.png";
-import blueShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/blueShoe.png";
-import greenShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/greenShoe.png";
-import redShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/redShoe.png";
+import peachShoe from "../Assets/backgrounds/peachShoe.png";
+import blueShoe from "../Assets/backgrounds/blueShoe.png";
+import greenShoe from "../Assets/backgrounds/greenShoe.png";
+import redShoe from "../Assets/backgrounds/redShoe.png";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
-import { Grid, Box, Button, Typography, Link, Paper } from "@material-ui/core";
+import { Grid, Button, Typography, Paper } from "@material-ui/core";
 import MobileStepper from "@material-ui/core/MobileStepper";
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
-import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
-import {
-  ABOUT,
-  BLOG,
-} from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/controller/nav-controller.js";
 import { autoPlay } from "react-swipeable-views-utils";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -73,15 +66,6 @@ const Home = (props) => {
   const theme = useTheme();
 
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
 
   const handleStepChange = (step) => {
     setActiveStep(step);
@@ -113,41 +97,7 @@ const Home = (props) => {
               </div>
             ))}
           </AutoPlaySwipeableViews>
-          <MobileStepper
-          //if you need to show the next buttons on the images is here in comments
-          // steps={maxSteps}
-          // position="static"
-          // variant="text"
-          // activeStep={activeStep}
-          // nextButton={
-          //   <Button
-          //     size="small"
-          //     onClick={handleNext}
-          //     disabled={activeStep === maxSteps - 1}
-          //   >
-          //     Next
-          //     {theme.direction === "rtl" ? (
-          //       <KeyboardArrowLeft />
-          //     ) : (
-          //       <KeyboardArrowRight />
-          //     )}
-          //   </Button>
-          // }
-          // backButton={
-          //   <Button
-          //     size="small"
-          //     onClick={handleBack}
-          //     disabled={activeStep === 0}
-          //   >
-          //     {theme.direction === "rtl" ? (
-          //       <KeyboardArrowRight />
-          //     ) : (
-          //       <KeyboardArrowLeft />
-          //     )}
-          //     Back
-          //   </Button>
-          // }
-          />
+          <MobileStepper />
         </Grid>
         <Grid
           item
@@ -189,16 +139,6 @@ const Home = (props) => {
             Sneakerhead wears, review and rates all the latest and greatest
             kicks on the market.
           </Typography>
-          {/* <Button
-            variant="text"
-            style={{
-              marginTop: "1rem",
-              marginBottom: "6rem",
-              fontSize: "1.5rem",
-            }}
-          >
-            Learn More
-          </Button> */}
           <StyledButton>Learn More</StyledButton>
         </Grid>
       </div>

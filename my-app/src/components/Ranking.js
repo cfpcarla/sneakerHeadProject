@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
-import peachShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/peachShoe.png";
-import blueShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/blueShoe.png";
-import greenShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/greenShoe.png";
-import redShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/redShoe.png";
-import ninjaAdidas from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/ninjaAdidas.png";
-import shoeTerrex from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/shoeTerrex.png";
+import peachShoe from "../Assets/backgrounds/peachShoe.png";
+import blueShoe from "../Assets/backgrounds/blueShoe.png";
+import greenShoe from "../Assets/backgrounds/greenShoe.png";
+import redShoe from "../Assets/backgrounds/redShoe.png";
+import ninjaAdidas from "../Assets/backgrounds/ninjaAdidas.png";
+import shoeTerrex from "../Assets/backgrounds/shoeTerrex.png";
 import CardFeature from "../side-components/card-features";
 
 const rankingStyle = makeStyles((theme) => ({
@@ -16,6 +16,7 @@ const rankingStyle = makeStyles((theme) => ({
     flexDirection: "row",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
+      maxWidth: 345,
     },
   },
   btnFeature: {
@@ -53,19 +54,6 @@ const Ranking = () => {
             <Typography align="center" variant="h6"></Typography>
           </Grid>
         </Box>
-
-        {/* <Grid>
-          <Button
-            className={classes.btnFeature}
-            color="secondary"
-            variant="contained"
-            href="https://github.com/cfpcarla"
-            target="_blank"
-          >
-            See all features
-          </Button>
-        </Grid> */}
-
         <Grid
           id="card-feature-projects"
           item
@@ -83,7 +71,7 @@ const Ranking = () => {
               href="#edu-section"
               margin-botton="3rem"
               variant="inherit"
-              component="h1"
+              component="h3"
             />
             <CardFeature
               title=" 2 Nike Revolution Shoes - Royal Blue"
@@ -116,7 +104,6 @@ const Ranking = () => {
               margin="0 auto 0 auto"
               href="#pro-section"
             />
-
             <CardFeature
               title="5 NINJA NITE JOGGER SHOES"
               desc="A collaborative effort between adidas and gaming streamer, Tyler Ninja Blevins, these Nite Jogger shoes stand as a testament to the time it takes to achieve greatness. Energy-returning cushioning and a mesh and leather upper keep you comfortable as the game heats up."
@@ -126,7 +113,6 @@ const Ranking = () => {
               margin="0 auto 0 auto"
               href="#pro-section"
             />
-
             <CardFeature
               title="6 TERREX TWO ULTRA PARLEY TRAIL RUNNING SHOES"
               desc="TERREX TWO Ultra Parley – designed to keep you comfortable on the trail, no matter the distance. The flexible upper features Parley Ocean Plastic – up-cycled plastic waste, intercepted on remote islands, beaches, coastal communities, and shorelines, preventing it from polluting our oceans. And with full-length Boost cushioning and a Continental™ Rubber outsole for serious grip, it's time to hit the trail."

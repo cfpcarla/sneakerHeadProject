@@ -49,10 +49,10 @@ const About = () => {
           lg={6}
           style={{ marginLeft: "2vw", marginRight: "2vw" }}
         >
-          <Typography variant="h3" component="h1" gutterBottom>
+          <Typography variant="inherit" component="h1" gutterBottom>
             Our mission
           </Typography>
-          <Typography variant="h4">
+          <Typography variant="h6" component="p">
             Our Mission As a profitable company in the market of shoe care
             products, providing the goods and services that best suit the needs
             of sector, market and customer diversity being one of the
