@@ -46,7 +46,8 @@ const Footer = (props) => {
           <Grid item xs={12} className={classes.footerHeader}>
             <Grid container className={classes.footerContent}>
               <Typography
-                variant="h4"
+                variant="inherit"
+                component="h2"
                 style={{ fontWeight: "bold", color: "black" }}
               >
                 Follow Us

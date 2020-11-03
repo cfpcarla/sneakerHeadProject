@@ -40,22 +40,12 @@ const Ranking = () => {
 
   return (
     <>
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Box
-          className={classes.root}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
+      <Box display="flex" flexDirection="column" alignItems="left">
+        <Box className={classes.root} display="flex">
           <Grid item xs={12} md={6} lg={6}>
             <Typography
-              align="center"
-              variant="h3"
+              variant="inherit"
+              component="h1"
               style={{ margin: "2vh 0 2vh 0" }}
             >
               Here are the 10 best shoes for you
@@ -92,6 +82,8 @@ const Ranking = () => {
               margin="0 auto 0 auto"
               href="#edu-section"
               margin-botton="3rem"
+              variant="inherit"
+              component="h1"
             />
             <CardFeature
               title=" 2 Nike Revolution Shoes - Royal Blue"

@@ -77,6 +77,7 @@ const navStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     justifyContent: "space-between",
     fontWeight: "bold",
+    font: "inherit",
   },
   headerItem: {
     position: "absolute",

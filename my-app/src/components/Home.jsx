@@ -4,7 +4,7 @@ import peachShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/As
 import blueShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/blueShoe.png";
 import greenShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/greenShoe.png";
 import redShoe from "/Users/carlamedeiros/src/sneakerHeadProject/my-app/src/Assets/backgrounds/redShoe.png";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import { Grid, Box, Button, Typography, Link, Paper } from "@material-ui/core";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
@@ -39,6 +39,7 @@ const homeStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     marginLeft: "-580px",
     marginBottom: "45px",
+    variant: "inherit",
   },
   header: {
     display: "flex",
@@ -53,6 +54,22 @@ const homeStyles = makeStyles((theme) => ({
     backgroundColor: "#455954",
   },
 }));
+
+const StyledButton = withStyles({
+  root: {
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    borderRadius: 6,
+    border: 0,
+    color: "white",
+    height: 48,
+    padding: "0 30px",
+    marginTop: "1rem",
+    marginBottom: "6rem",
+  },
+  label: {
+    textTransform: "capitalize",
+  },
+})(Button);
 
 const Home = (props) => {
   const classes = homeStyles();
@@ -76,7 +93,7 @@ const Home = (props) => {
   return (
     <>
       <div>
-        {/* INTRO */}
+        {/* Carousel images */}
         <Grid item xs={12}>
           <Paper square elevation={0} className={classes.header}>
             <Typography>{tutorialSteps[activeStep].label}</Typography>
@@ -100,6 +117,7 @@ const Home = (props) => {
             ))}
           </AutoPlaySwipeableViews>
           <MobileStepper
+          //if you need to show the next buttons on the images is here in comments
           // steps={maxSteps}
           // position="static"
           // variant="text"
@@ -146,7 +164,9 @@ const Home = (props) => {
           }}
         >
           <Typography
-            variant="h1"
+            className={classes.typography}
+            variant="inherit"
+            component="h1"
             align="center"
             style={{
               marginTop: "3rem",
@@ -158,7 +178,8 @@ const Home = (props) => {
             We really love shoes
           </Typography>
           <Typography
-            variant="h4"
+            variant="inherit"
+            component="h2"
             align="center"
             style={{
               marginTop: "3rem",
@@ -166,22 +187,22 @@ const Home = (props) => {
               color: "black",
               alignItems: "center",
               background: "#F2F3F4",
-              fontStyle: "verdana",
             }}
           >
             Sneakerhead wears, review and rates all the latest and greatest
             kicks on the market.
           </Typography>
-          <Button
+          {/* <Button
+            variant="text"
             style={{
               marginTop: "1rem",
               marginBottom: "6rem",
               fontSize: "1.5rem",
             }}
-            variant="contained"
           >
             Learn More
-          </Button>
+          </Button> */}
+          <StyledButton>Learn More</StyledButton>
         </Grid>
       </div>
     </>
