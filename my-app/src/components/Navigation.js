@@ -78,8 +78,6 @@ const navStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     marginTop: theme.spacing(3),
     justifyContent: "space-between",
-    fontWeight: "bold",
-    font: "inherit",
   },
   headerItem: {
     position: "absolute",

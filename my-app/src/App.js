@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import { theme } from "./styles/theme";
 import { Box, ThemeProvider } from "@material-ui/core";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
@@ -15,7 +14,7 @@ function App() {
   //SET WHICH TAB YOU WANT TO WORK IN
   const [display, setDisplay] = useState(HOME);
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       <Navigation setDisplay={setDisplay}></Navigation>
       <div>
         <Box display={display === HOME ? "block" : "none"}>
