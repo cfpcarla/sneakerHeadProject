@@ -72,77 +72,75 @@ const Home = (props) => {
   };
 
   return (
-    <>
-      <div>
-        {/* Carousel images */}
-        <Grid item xs={12}>
-          <Paper square elevation={0} className={classes.header}>
-            <Typography>{tutorialSteps[activeStep].label}</Typography>
-          </Paper>
-          <AutoPlaySwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-            index={activeStep}
-            onChangeIndex={handleStepChange}
-            enableMouseEvents
-          >
-            {tutorialSteps.map((step, index) => (
-              <div key={step.label}>
-                {Math.abs(activeStep - index) <= 2 ? (
-                  <img
-                    className={classes.img}
-                    src={step.imgPath}
-                    alt={step.label}
-                  />
-                ) : null}
-              </div>
-            ))}
-          </AutoPlaySwipeableViews>
-          <MobileStepper />
-        </Grid>
-        <Grid
-          item
-          xs={12}
+    <Grid container>
+      {/* Carousel images */}
+      <Grid item xs={12}>
+        <Paper square elevation={0} className={classes.header}>
+          <Typography>{tutorialSteps[activeStep].label}</Typography>
+        </Paper>
+        <AutoPlaySwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={activeStep}
+          onChangeIndex={handleStepChange}
+          enableMouseEvents
+        >
+          {tutorialSteps.map((step, index) => (
+            <div key={step.label}>
+              {Math.abs(activeStep - index) <= 2 ? (
+                <img
+                  className={classes.img}
+                  src={step.imgPath}
+                  alt={step.label}
+                />
+              ) : null}
+            </div>
+          ))}
+        </AutoPlaySwipeableViews>
+        <MobileStepper />
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          background: "#EFCEB7",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          className={classes.typography}
+          variant="inherit"
+          component="h1"
+          align="center"
           style={{
-            display: "flex",
-            flexDirection: "column",
+            marginTop: "3rem",
+            color: "black",
             alignItems: "center",
             background: "#EFCEB7",
-            justifyContent: "center",
           }}
         >
-          <Typography
-            className={classes.typography}
-            variant="inherit"
-            component="h1"
-            align="center"
-            style={{
-              marginTop: "3rem",
-              color: "black",
-              alignItems: "center",
-              background: "#EFCEB7",
-            }}
-          >
-            We really love shoes
-          </Typography>
-          <Typography
-            variant="inherit"
-            component="h2"
-            align="center"
-            style={{
-              marginTop: "3rem",
-              marginBottom: "3rem",
-              color: "black",
-              alignItems: "center",
-              background: "#EFCEB7",
-            }}
-          >
-            Sneakerhead wears, review and rates all the latest and greatest
-            kicks on the market.
-          </Typography>
-          <StyledButton>Learn More</StyledButton>
-        </Grid>
-      </div>
-    </>
+          We really love shoes
+        </Typography>
+        <Typography
+          variant="inherit"
+          component="h2"
+          align="center"
+          style={{
+            marginTop: "3rem",
+            marginBottom: "3rem",
+            color: "black",
+            alignItems: "center",
+            background: "#EFCEB7",
+          }}
+        >
+          Sneakerhead wears, review and rates all the latest and greatest kicks
+          on the market.
+        </Typography>
+        <StyledButton>Learn More</StyledButton>
+      </Grid>
+    </Grid>
   );
 };
 
